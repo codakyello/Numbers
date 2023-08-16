@@ -12,6 +12,8 @@ async function getTicketNumber() {
 
 const numEl = document.querySelector(".number");
 const btnEl = document.querySelector(".btn");
+const resetEl = document.querySelector(".reset");
+
 const wait = (seconds) => {
   return new Promise(function (resolve, reject) {
     setTimeout(resolve, seconds * 1000);
@@ -30,9 +32,16 @@ async function Lottery() {
     // Set interval is an
 
     await wait(0.1);
-    numEl.innerHTML = ticketNumbers[randNum];
+    if (ticketNumbers) {
+      numEl.innerHTML = ticketNumbers[randNum];
+    }
+
     //   console.log(randNum[arr]);
   }
 }
 
 btnEl.addEventListener("click", Lottery);
+
+resetEl.addEventListener("click", () => {
+  numEl.innerHTML = "_";
+});
