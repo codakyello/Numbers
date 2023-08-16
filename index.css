@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-align: center;
+  gap: 2rem;
+  background-color: #eee;
+  color: #333;
+  position: relative;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 60%;
+}
+
+img {
+  margin-top: 4rem;
+  height: 8rem;
+}
+
+.number {
+  font-size: 15rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  border: none;
+  display: inline-block;
+  background-color: #0634f0;
+  padding: 1.5rem 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
