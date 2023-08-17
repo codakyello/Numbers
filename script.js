@@ -43,5 +43,5 @@ async function Lottery() {
 btnEl.addEventListener("click", Lottery);
 
 resetEl.addEventListener("click", () => {
-  numEl.innerHTML = "_";
+  numEl.innerHTML = "💰";
 });
