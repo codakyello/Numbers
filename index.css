@@ -6,7 +6,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
   gap: 2rem;
   background-color: #eee;
@@ -19,8 +19,26 @@ body {
   justify-content: space-between;
 }
 
+@media (max-width: 75em) {
+  body {
+    height: 90vh;
+  }
+}
+
 html {
   font-size: 60%;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 img {
@@ -30,6 +48,7 @@ img {
 
 .number {
   font-size: 15rem;
+  padding: 0 2rem;
 }
 
 button {
@@ -55,4 +74,8 @@ button {
 .reset {
   border: 2px solid #0634f0;
   color: #000;
+}
+
+.btn-box {
+  text-align: center;
 }
