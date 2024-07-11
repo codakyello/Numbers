@@ -80,6 +80,13 @@ button {
   text-align: center;
 }
 
+.number {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+}
+
 .tag {
   font-weight: 600;
   width: 12rem;
@@ -89,4 +96,17 @@ button {
   padding: 0.5rem;
   color: white;
   background-color: #5171f5;
+}
+
+.jack-box {
+  position: relative;
+}
+
+.jack {
+  align-self: center;
+  height: 32rem;
+}
+
+.hide {
+  visibility: hidden;
 }

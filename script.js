@@ -16,6 +16,7 @@ async function getTicketNumber() {
 const numEl = document.querySelector(".number");
 const btnEl = document.querySelector(".btn");
 const resetEl = document.querySelector(".reset");
+const jackEl = document.querySelector(".jack");
 
 const wait = (seconds) => {
   return new Promise(function (resolve, reject) {
@@ -42,7 +43,7 @@ async function Lottery() {
     // Set interval is an
 
     if (reset) {
-      numEl.innerHTML = "_";
+      numEl.classList.add("hide");
       isSpinning = false;
       drumRoll.pause(); // Pause the audio
       drumRoll.currentTime = 0;
@@ -54,7 +55,7 @@ async function Lottery() {
       numEl.innerHTML = ticketNumbers[randNum];
     }
 
-    //   console.log(randNum[arr]);
+    numEl.classList.remove("hide");
   }
   isSpinning = false;
 }
@@ -63,16 +64,29 @@ async function Lottery() {
 // when true we shouldnt be able to go for a second spin until after the spinning is completed.
 
 const jsConfetti = new JSConfetti();
-var drumRoll = new Audio("./drum-roll-sound-effect.mp3");
-var crash = new Audio("./crash.mp3");
+let drumRoll = new Audio("./drum-roll-sound-effect.mp3");
+let crash = new Audio("./crash.mp3");
 btnEl.addEventListener("click", async () => {
+  jackEl.classList.add("hide");
+
   reset = false;
   if (!isSpinning) {
     drumRoll.play();
     await Lottery();
     if (!reset) {
       crash.play();
-      jsConfetti.addConfetti();
+      jsConfetti.addConfetti({
+        // emojis: ["🌈", "⚡️", "💥", "✨", "💫", "🌸"],
+
+        confettiColors: [
+          "#0634f0",
+          "#5171f5",
+          "#ff7096",
+          "#fb8500",
+          "#fb8500",
+          "#f9bec7",
+        ],
+      });
     }
   }
 });
@@ -81,4 +95,6 @@ resetEl.addEventListener("click", () => {
   // jsConfetti.addConfetti();
 
   reset = true;
+  jackEl.classList.remove("hide");
+  numEl.classList.add("hide");
 });
