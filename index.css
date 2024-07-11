@@ -89,7 +89,7 @@ button {
 
 .tag {
   font-weight: 600;
-  width: 12rem;
+  width: 10rem;
   margin: 4rem auto;
   font-size: 1.6rem;
   border-radius: 10px;
@@ -104,7 +104,7 @@ button {
 
 .jack {
   align-self: center;
-  height: 32rem;
+  height: 25rem;
 }
 
 .hide {
