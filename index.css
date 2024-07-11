@@ -81,14 +81,12 @@ button {
 }
 
 .tag {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: 600;
-  top: 12%;
+  width: 12rem;
+  margin: 4rem auto;
   font-size: 1.6rem;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   color: white;
   background-color: #5171f5;
 }
